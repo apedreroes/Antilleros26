@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Comida del puente · Casa rural Ávila 2026</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="saltar" href="#lista">Ir a la lista</a>
+
+  <header class="cabecera">
+    <div class="contenedor">
+      <h1>Comida del puente</h1>
+      <p class="subtitulo">Casa rural en Ávila · del 4 al 8 de diciembre de 2026</p>
+      <div id="identidad" class="identidad"></div>
+    </div>
+  </header>
+
+  <main id="principal" class="contenedor">
+    <div id="aviso-conexion"></div>
+
+    <p id="cargando" class="cargando">Cargando la lista…</p>
+
+    <section id="elegir-familia" class="elegir-familia" aria-labelledby="elegir-titulo" hidden></section>
+
+    <div id="app" hidden>
+      <p id="contador" class="contador"></p>
+
+      <div class="filtros" role="group" aria-labelledby="filtros-titulo">
+        <span id="filtros-titulo" class="filtros-titulo">Mostrar:</span>
+        <button type="button" class="boton boton-filtro" data-filtro="falta" data-foco="filtro-falta" aria-pressed="true">Falta</button>
+        <button type="button" class="boton boton-filtro" data-filtro="mio" data-foco="filtro-mio" aria-pressed="false">Lo mío</button>
+        <button type="button" class="boton boton-filtro" data-filtro="todo" data-foco="filtro-todo" aria-pressed="false">Todo</button>
+      </div>
+
+      <div id="compartir" class="compartir" hidden></div>
+
+      <details class="resumen" id="resumen">
+        <summary>Resumen por familia</summary>
+        <div id="resumen-contenido"></div>
+      </details>
+
+      <div id="lista" class="lista" tabindex="-1"></div>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>
+        Las comidas encargadas o fuera de casa (paella, pizza, asado,
+        hamburguesería y la comida en Segovia) <strong>no se gestionan en esta
+        app</strong>. Si alguna se cae, el organizador añadirá aquí una comida
+        nueva.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Regiones para lectores de pantalla. Deben existir desde el principio. -->
+  <div id="avisos" class="solo-lectores" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div id="errores" class="solo-lectores" role="alert" aria-atomic="true"></div>
+</body>
+</html>
